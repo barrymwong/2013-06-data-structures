@@ -1,3 +1,18 @@
-var Queue = function() {
-  // Hey! Copy your code from src/prototypal/queue.js and paste it here
+var Queue = function(){
+  this.storage = {};
+
+  this.size = 0; 
+
+  this.queue = {};
+
+  this.enqueue = function(value){
+  };
+
+  this.dequeue = function(){
+  };
+
+  this.size = function(){
+  };
+
+  return queue;
 };
