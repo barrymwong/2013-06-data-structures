@@ -33,17 +33,26 @@ describe("stack", function() {
     stack.push('dog');
     stack.push('cat');
     stack.push('mouse');
-    stack.pop('dog');
-    stack.pop('cat');
+    stack.pop();
+    stack.pop();
     expect(stack.size()).to.equal(1);
   });
 
-  xit('should push and pop multiple items in the right order (LIFO)', function() {
-    // Fill out the body of the test here
+  it('should push and pop multiple items in the right order (LIFO)', function() {
+    var stack = new makeStack();
+    expect(stack.push('dog')).to.equal('dog');
+    expect(stack.push('cat')).to.equal('cat');
+    expect(stack.push('mouse')).to.equal('mouse');
+    expect(stack.pop()).to.equal('cat');
+    expect(stack.pop()).to.equal('dog');
   });
 
-  xit('should not error when popping from an empty stack', function() {
-    // Fill out the body of the test here
+  it('should not error when popping from an empty stack', function() {
+    var stack = new makeStack();
+    stack.pop();
+    stack.pop();
+    stack.pop();
+    expect(stack.size()).to.equal(0);
   });
 
   // Hey! Add more tests here if you can think of ways to test your stack more thoroughly
